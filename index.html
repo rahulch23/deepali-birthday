@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Deepali ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff9fb2,#ffd8e4);
+color:black;
+overflow-x:hidden;
+text-align:center;
+}
+
+section{
+padding:70px 20px;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:3.5rem;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.2rem;
+max-width:700px;
+line-height:1.8;
+}
+
+.btn{
+padding:15px 30px;
+border:none;
+border-radius:50px;
+font-size:18px;
+cursor:pointer;
+background:white;
+color:#ff4d88;
+margin-top:25px;
+}
+
+.card{
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+padding:25px;
+border-radius:20px;
+max-width:900px;
+margin:auto;
+}
+
+.days{
+font-size:35px;
+font-weight:bold;
+margin-top:15px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-top:25px;
+}
+
+.gallery img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:15px;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+#cake{
+font-size:110px;
+margin:20px;
+}
+
+#message{
+font-size:28px;
+margin-top:30px;
+line-height:1.8;
+white-space:pre-line;
+}
+
+.heart{
+position:fixed;
+bottom:-30px;
+animation:float 8s linear infinite;
+pointer-events:none;
+}
+
+@keyframes float{
+
+from{
+transform:translateY(0);
+opacity:1;
+}
+
+to{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+pointer-events:none;
+}
+
+.footer{
+padding:50px;
+font-size:24px;
+}
+
+audio{
+margin-top:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<canvas id="confettiCanvas"></canvas>
+
+<audio autoplay loop controls>
+<source src="song.mp3.mp3" type="audio/mpeg">
+</audio>
+
+<section class="hero">
+
+<h1>🎂 Happy Birthday Deepali ❤️</h1>
+
+<p>
+
+✨ Some smiles make a moment beautiful.
+Yours makes memories beautiful.
+
+<br><br>
+
+A little surprise made by Rahul 🌸
+
+</p>
+
+<a href="#journey">
+<button class="btn">
+Open My Surprise ❤️
+</button>
+</a>
+
+</section>
+
+<section id="journey">
+
+<div class="card">
+
+<h2>❤️ Our Journey ❤️</h2>
+
+<div class="days" id="daysCounter">
+Loading...
+</div>
+
+<p>
+Together since July 08, 2023 🌸
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>📸 Our Beautiful Memories 📸</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg.jpg">
+<img src="photo2.jpg.jpg">
+<img src="photo3.jpg.jpg">
+<img src="photo4.jpg.jpg">
+<img src="photo5.jpg.jpg">
+<img src="photo6.jpg.jpg">
+<img src="photo7.jpg.jpg">
+<img src="photo8.jpg.jpg">
+
+</div>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>💌 A Message For Deepali 💌</h2>
+
+<br>
+
+<p style="line-height:2;font-size:20px;">
+
+Dear Deepali,
+
+<br><br>
+
+Thank you for all the laughter,
+all the conversations,
+and all the beautiful memories.
+
+<br><br>
+
+Since July 08, 2024,
+life has been filled with moments
+I'll always cherish.
+
+<br><br>
+
+May this birthday bring you happiness,
+success, good health,
+and countless reasons to smile.
+
+<br><br>
+
+Keep shining,
+keep smiling,
+and keep being
+the wonderful person you are.
+
+<br><br>
+
+✨ Forever cheering for your smile.
+
+<br><br>
+
+— Rahul ❤️
+
+</p>
+
+</div>
+
+</section>
+
+<section id="cakeSection">
+
+<h1>🎂 Make A Wish Dee 🎂</h1>
+
+<div id="cake">
+🎂🕯️🕯️🕯️
+</div>
+
+<button class="btn"
+onclick="blowCandles()">
+
+🎤 Blow Candles
+
+</button>
+
+<h2 id="message"></h2>
+
+</section>
+
+<section>
+
+<div class="card">
+
+<h2>🎁 A Small Surprise 🎁</h2>
+
+<br>
+
+<p style="font-size:22px;line-height:2">
+
+Sometimes the best memories
+aren't planned.
+
+<br><br>
+
+They're hidden in random laughs,
+late conversations,
+silly photos,
+and moments that become special.
+
+<br><br>
+
+Thank you for being part of so many
+beautiful memories.
+
+<br><br>
+
+🌸 Happy Birthday Deepali 🌸
+
+</p>
+
+</div>
+
+</section>
+
+<div class="footer">
+
+❤️ Happy Birthday Deepali ❤️
+
+<br><br>
+
+Made with lots of care by Rahul 🌸
+
+</div>
+<script>
+
+/* DAYS COUNTER */
+
+const startDate =
+new Date("2023-07-08");
+
+const today =
+new Date();
+
+const difference =
+today - startDate;
+
+const days =
+Math.floor(
+difference /
+(1000*60*60*24)
+);
+
+document.getElementById(
+"daysCounter"
+).innerHTML =
+days + " Days Together ❤️";
+
+
+/* FLOATING HEARTS */
+
+function createHeart(){
+
+const heart =
+document.createElement("div");
+
+heart.classList.add(
+"heart"
+);
+
+heart.innerHTML = "❤️";
+
+heart.style.left =
+Math.random()*100 + "vw";
+
+heart.style.fontSize =
+(20 + Math.random()*25)
++ "px";
+
+document.body.appendChild(
+heart
+);
+
+setTimeout(()=>{
+
+heart.remove();
+
+},8000);
+
+}
+
+setInterval(
+createHeart,
+350
+);
+
+
+/* CANDLE BLOWING */
+
+async function blowCandles(){
+
+document.getElementById(
+"message"
+).innerHTML =
+"🎤 Blow into the microphone...";
+
+try{
+
+const stream =
+await navigator
+.mediaDevices
+.getUserMedia({
+audio:true
+});
+
+const audioContext =
+new (
+window.AudioContext ||
+window.webkitAudioContext
+)();
+
+const source =
+audioContext
+.createMediaStreamSource(
+stream
+);
+
+const analyser =
+audioContext
+.createAnalyser();
+
+source.connect(
+analyser
+);
+
+const data =
+new Uint8Array(
+analyser.frequencyBinCount
+);
+
+function detectBlow(){
+
+analyser
+.getByteFrequencyData(
+data
+);
+
+let volume =
+data.reduce(
+(a,b)=>a+b,
+0
+) / data.length;
+
+/* sensitivity */
+
+if(volume > 40){
+
+document
+.getElementById(
+"cake"
+)
+.innerHTML =
+"🎂";
+
+document
+.getElementById(
+"message"
+)
+.innerHTML =
+
+`🎉 Happy Birthday Dee ❤️
+
+Thank you for all the beautiful memories.
+
+I Love You ❤️
+
+✨ Forever cheering for your smile.
+
+— Rahul ❤️`;
+
+startConfetti();
+
+stream
+.getTracks()
+.forEach(
+track =>
+track.stop()
+);
+
+return;
+
+}
+
+requestAnimationFrame(
+detectBlow
+);
+
+}
+
+detectBlow();
+
+}
+catch(error){
+
+alert(
+"Please allow microphone permission."
+);
+
+}
+
+}
+
+
+/* CONFETTI */
+
+const canvas =
+document.getElementById(
+"confettiCanvas"
+);
+
+const ctx =
+canvas.getContext(
+"2d"
+);
+
+canvas.width =
+window.innerWidth;
+
+canvas.height =
+window.innerHeight;
+
+let confetti = [];
+
+function startConfetti(){
+
+confetti = [];
+
+for(
+let i=0;
+i<300;
+i++
+){
+
+confetti.push({
+
+x:
+Math.random()
+*
+canvas.width,
+
+y:
+Math.random()
+*
+canvas.height,
+
+r:
+Math.random()*6+2,
+
+dx:
+(Math.random()-0.5)
+*5,
+
+dy:
+Math.random()*4+2
+
+});
+
+}
+
+animateConfetti();
+
+}
+
+function animateConfetti(){
+
+ctx.clearRect(
+0,
+0,
+canvas.width,
+canvas.height
+);
+
+confetti.forEach(c=>{
+
+ctx.beginPath();
+
+ctx.arc(
+c.x,
+c.y,
+c.r,
+0,
+Math.PI*2
+);
+
+ctx.fillStyle =
+`hsl(
+${Math.random()*360},
+100%,
+70%
+)`;
+
+ctx.fill();
+
+c.x += c.dx;
+c.y += c.dy;
+
+if(
+c.y >
+canvas.height
+){
+
+c.y = 0;
+
+}
+
+});
+
+requestAnimationFrame(
+animateConfetti
+);
+
+}
+
+
+/* RESPONSIVE */
+
+window.addEventListener(
+"resize",
+()=>{
+
+canvas.width =
+window.innerWidth;
+
+canvas.height =
+window.innerHeight;
+
+}
+);
+
+</script>
+
+</body>
+</html>
